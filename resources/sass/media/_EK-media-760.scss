@@ -1,0 +1,316 @@
+@media screen and (max-width: 760px) {
+    $EK-P_big: 3.5%;
+    .EK_header_title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .EK_text-H {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .EK_text-H1 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .EK_text-H2 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .EK_text-T1 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .EK_text-T2 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .Ek_sep_shop {
+        .EK_text-T1 {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    .EK_sep_header {
+        margin: 0 0 30px $EK-P_big;
+    }
+    .EK_separator {
+        margin: 0 0 50px 0;
+    }
+    .EK_sep_hello {
+        min-height: 153px;
+        padding: 30px 0 0 $EK-P_big;
+    }
+    .EK_sep_hello-text {
+        max-width: 140px;
+    }
+    .EK_sep_about-content {
+        min-height: 235px;
+
+        .EK_text-H1 {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        .EK_text-H2 {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    .EK_sep_about-text {
+        padding: 0;
+    }
+    .Ek_shop_navigate .EK_text-H2 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+
+    //MENU
+    .EK_header {
+        min-height: 51px;
+    }
+    .EK_menu {
+        display: none;
+    }
+
+    .EK_burgerMenu {
+        display: block;
+        width: 25px;
+        height: 25px;
+        z-index: 1;
+    }
+    .EK_burgermenu-stroke {
+        display: block;
+        margin-top: 48%;
+        width: 25px;
+        border-radius: 2px;
+        background-color: black;
+        height: 1px;
+        position: relative;
+        z-index: 999;
+
+        &:before {
+            transition: 0.5s;
+            width: 25px;
+            border-radius: 2px;
+            background-color: black;
+            height: 1px;
+            content: '';
+            position: absolute;
+            top: -8px;
+        }
+
+        &:after {
+            transition: 0.5s;
+            width: 25px;
+            border-radius: 2px;
+            background-color: black;
+            height: 1px;
+            content: '';
+            position: absolute;
+            top: 8px;
+        }
+    }
+.EK_menuModalCont{
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+}
+    .EK_menu_760{
+        padding: 0 10px 0 0 ;
+        width: 100%;
+        height: 100%;
+        background-color: $EK-C-White;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        .EK_sep_line{
+            width: 80%;
+            margin: 20px 0;
+        }
+    }
+
+    //MENU
+    .Ek_shop_navigate {
+        margin: 0 0 30px 0;
+        overflow: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 24px;
+    }
+    .Ek_shop_navigate_link {
+        white-space: nowrap;
+    }
+    .EK_shop_item {
+        .EK_sep_line {
+            margin: 10px 0 10px 0;
+        }
+    }
+    .EK_shop_item_img {
+        margin: 0 0 10px 0;
+    }
+    .EK_shop_item_desc {
+        min-height: 85px;
+    }
+    .EK_questions_header {
+        margin: 0 0 30px 0;
+
+    }
+    .EK_questions_social{
+        flex-wrap: wrap;
+    }
+    .EK_questions_icon {
+        margin: 0 20px 0 0 ;
+    }
+    .EK_questions_text-1{
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+    .EK_questions {
+        min-height: 600px;
+        background: $EK-C-Green no-repeat center;
+        background-size: 100%;
+    }
+    .EK_mailing_box {
+        width: 100%;
+        margin: 0;
+        padding: 0 3.5%;
+    }
+    .EK_questions_sep {
+        width: auto;
+        margin: 0 3.5%;
+        padding: 50px 0 0 0;
+    }
+    .EK_shop {
+        margin: 0 $EK-P_big 0 $EK-P_big;
+    }
+    .EK_shop_item {
+        width: 47.5%;
+        margin: 0 5% 50px 0;
+
+        &:nth-child(3n) {
+            margin: 0 5% 50px 0;
+        }
+
+        &:nth-child(2n) {
+            margin: 0 0 50px 0;
+        }
+    }
+    .EK_pay_header {
+        margin: 0 0 30px 0;
+    }
+
+    .EK_pay {
+        margin: 0 10.5% 50px 10.5%;
+    }
+    .EK_footer {
+        margin: 0 $EK-P_big;
+    }
+    .EK_footer_sep{
+    display: block;
+        margin:  0 0 60px 0;
+    }
+    .EK_footer_block {
+        width: 50%;
+    }
+    .EK_footer_icon {
+        margin: 0 10px 0 0;
+    }
+    .EK_footer_header {
+        margin: 20px 0 15px 0;
+    }
+    .EK_footer_block-1 {
+        float: right;
+        padding: 0 0  0 40px;
+
+    }
+    .EK_footer_block-2 {
+        order: 1;
+    }
+    .EK_footer_block-3 {
+
+    }
+
+    //CUSTOMER BIN
+    .EK_modalBin{
+        .modalCloseBatton {
+            top: 20px;
+            margin: 0 20px 0 0;
+        }
+    }
+    .EK_customer_bin {
+        padding: 60px $EK-P_big;
+    }
+    .EK_Btn-icon-BIgWhite {
+        width: 30px;
+        height: 30px;
+
+        use {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .EK_customer_bin_cart_withoutImg {
+        margin: 0 0 0 15px;
+        height: 80px;
+    }
+    .EK_customer_bin_cart-countCont {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 0 0;
+        order: 3;
+    }
+    .EK_customer_bin_cart-price {
+        min-width: 60px;
+        order: 2;
+    }
+    .EK_customer_bin_cart-name, .EK_customer_bin_cart-nameCont {
+        width: 100%;
+        order: 1;
+    }
+    .EK_customer_bin_cart-delItem {
+        order: 4;
+    }
+    .EK_customer_bin_cart-btnDel, .EK_customer_bin_cart-btnAdd, .EK_customer_bin_cart-delItem {
+        width: 13px;
+        height: 13px;
+
+    }
+    .EK_customer_bin-payBlock {
+        padding: 0 0 0 0;
+        margin: 0 10%;
+    }
+    .EK_customer_bin-check-Box {
+        margin: 0 6px 0 25px;
+
+    }
+    .EK_customer_bin-header {
+        margin: 50px 0 0 0;
+    }
+    .EK_customer_bin-promo {
+        margin: 0 0 80px 0;
+    }
+    .EK_customer_bin-promoInput {
+        margin: 30px 0 20px 0;
+        width: 100%;
+        height: 36px;
+    }
+    .EK_customer_bin-promoBtn {
+        margin-left: 50%;
+        width: 50%;
+    }
+    .EK_customer_bin-btn {
+        margin: 40px 0 0 0;
+    }
+}

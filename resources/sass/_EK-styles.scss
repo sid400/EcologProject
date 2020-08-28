@@ -1,0 +1,692 @@
+html, body {
+    background-color: $EK-C-White;
+}
+
+.EK {
+
+    position: relative;
+}
+
+.EK_container {
+    background-color: $EK-C-White;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+//Bin
+
+.EK_customer_bin_logo {
+    position: sticky;
+    top: 60px;
+    bottom: initial;
+    height: 0;
+    text-align: right;
+    margin: 0 $EK-P_big 0 0;
+    cursor: pointer;
+}
+
+.EK_customer_bin_dot {
+    background-color: $EK-C-Orange;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    text-align: right;
+    margin: 0 $EK-P_big 0 0;
+}
+
+.EK_customer_bin-ico {
+    margin: 10px 0 0 0;
+    z-index: 1000;
+}
+
+//header
+.EK_header {
+    min-height: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20% 0 $EK-P_big;
+}
+
+.EK_header_title {
+    font-size: 48px;
+    line-height: 56px;
+    text-transform: capitalize;
+}
+
+.EK_menu {
+    flex-grow: 1;
+    text-align: right;
+    margin: 16px 0 0 0;
+}
+
+.EK_menu_item {
+    margin: 0 0 0 2.7%;
+}
+
+//main
+
+
+.EK_separator {
+    margin: 0 0 240px 0;
+}
+
+.EK_sep_header {
+    margin: 0 0 60px $EK-P_big;
+}
+
+.EK_sep_hello {
+    background: url($EK-R-img + "backGrounds/Hello.jpeg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 700px;
+    padding: 189px 0 0 $EK-P_big;
+}
+
+.EK_sep_hello-text {
+    color: $EK-C-White;
+    max-width: 500px;
+}
+
+
+.EK_sep_about-content {
+    min-height: 630px;
+    background: url($EK-R-img + "backGrounds/About_1.jpeg"),
+    url($EK-R-img + "backGrounds/About_3.svg"),
+    url($EK-R-img + "backGrounds/About_2.jpeg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 737px 396px, 700px 315px, 380px 569px;
+    background-position: right 900px top 0, 45% 100%, left 960px top 0;
+
+}
+
+.EK_sep_about-text {
+    margin: 0 0 35px 40.2%;
+    padding: 65px 0 0 0;
+    max-width: 380px;
+    //background-color: white;
+}
+
+
+.Ek_sep_shop {
+    margin: 0 0 120px 0;
+}
+
+.EK_shop {
+    margin: 0 $EK-P_big 0 $EK-P_big;
+}
+
+.Ek_shop_navigate {
+    margin: 0 0 60px 0;
+    overflow: visible;
+}
+
+.Ek_shop_navigate_link {
+    margin: 0 2.7% 0 0;
+}
+
+
+//SHOP
+.Ek_shop_showcase {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+}
+
+.EK_shop_item {
+    width: 30%;
+    margin: 0 5% 120px 0;
+
+    &:nth-child(3n) {
+        margin: 0 0 120px 0;
+    }
+}
+
+.EK_shop_item_img {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.EK_shop_item_line {
+    margin: 15px 0 15px 0;
+}
+
+.EK_shop_item_sep {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.EK_shop_item_btn {
+    width: 160px;
+    height: 48px;
+}
+
+.EK_shop_item_price {
+    position: relative;
+    padding: 0 8px 0 0;
+}
+
+.EK_mailing {
+    min-height: 283px;
+    background: url($EK-R-img + "backGrounds/mailing.jpeg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EK_mailing_box {
+    width: 39%;
+    min-height: 163px;
+    background-color: $EK-C-Orange90;
+    margin: 0 30.5% 0 30.5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.EK_mailing_text, {
+    max-width: 350px;
+}
+
+.EK_mailing_form {
+    position: relative;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.EK_mailing_form_errors {
+    min-width: 300px;
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+}
+
+.EK_mailing_input {
+    padding: 0 0 0 10px;
+    height: 26px;
+    flex-shrink: 2;
+    flex-grow: 2;
+}
+
+.EK_mailing_submit {
+    width: 92px;
+    margin: 0 0 0 10px;
+    @extend .EK_text-T2;
+    color: $EK-C-Black;
+    background-color: $EK-C-Clear;
+    border: 0.5px solid $EK-C-Black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+    &:hover {
+        border: 0.5px solid $EK-C-White;
+        color: $EK-C-White;
+    }
+
+}
+
+.EK_pay {
+    margin: 0 13.9% 240px 13.9%;
+}
+
+.EK_pay_header {
+    margin: 0 0 60px 0;
+}
+
+.EK_pay_sep {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.EK_pay_block {
+    width: 340px;
+}
+
+.EK_pay_line {
+    margin: 15px 0 30px 0;
+    width: 240px;
+}
+
+.EK_pay_list {
+    padding: 0 0 0 0;
+    list-style-type: none;
+}
+
+.EK_pay_list_item {
+    margin: 0 0 5px 0;
+}
+
+.EK_pay_price {
+    position: relative;
+    padding: 0 8px 0 0;
+}
+
+.EK_questions {
+    margin: 0 $EK-P_big 240px $EK-P_big;
+    min-height: 844px;
+    background: url($EK-R-img + "backGrounds/QQ.jpeg"), url($EK-R-img + "backGrounds/QQ2.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 500px 751px, 900px 775px;
+    background-position: right 700px bottom 0, right 60px top 0;
+}
+
+.EK_questions_header {
+    margin: 0 0 60px 0;
+    color: $EK-C-White;
+}
+
+.EK_questions_text {
+    color: $EK-C-White;
+}
+
+.EK_questions_text-2 {
+    margin: 0 0 20px 0;
+
+}
+
+.EK_questions_text-3 {
+
+    padding: 0 0 0 10px;
+}
+
+.EK_questions_text-4 {
+    text-align: right;
+    align-self: flex-end;
+    margin-top: 15px;
+    width: 240px;
+}
+
+.EK_questions_sep {
+    width: 340px;
+    margin: 0 0 0 50.4%;
+    padding: 150px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.EK_questions_social {
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.EK_questions_icon {
+    margin: 0 0 0 20px;
+}
+
+.EK_questions_element {
+    width: 100%;
+    margin: 15px 0 0 0;
+    display: block;
+}
+
+.EK_questions_form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+.EK_questions_form_wrapper {
+    position: relative;
+}
+
+.EK_questions_form_error {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    color: $EK-C-Orange;
+}
+
+.EK_questions_form-input {
+    padding: 0 0 5px 10px;
+}
+
+
+.EK_questions_form-btn {
+    width: 140px;
+    height: 40px;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+
+.EK_footer {
+    margin: 0 $EK-P_big 40px $EK-P_big;
+}
+
+.EK_footer_sep {
+    padding: 0 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.EK_footer_block {
+    display: flex;
+    flex-direction: column;
+}
+
+.EK_footer_header {
+    margin: 40px 0 30px 0;
+}
+
+.EK_footer_text {
+    margin: 0 0 10px 0;
+}
+
+.EK_footer_icon {
+    fill: $EK-C-Black;
+    margin: 0 20px 0 0;
+}
+
+//Modal
+.EK_modalBin {
+    .modalWrapper-1 {
+        //padding: 0 0 100% 0;
+        background-color: $EK-C-Black80;
+    }
+
+    .modalWrapper-2 {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .modalWrapper-3 {
+        padding: 140px 0 0 0;
+    }
+
+    .modalClose {
+        margin: 10px 0 0 0;
+    }
+
+
+    .modalCloseBatton {
+        position: sticky;
+        top: 60px;
+        height: 0;
+        text-align: right;
+        margin: 0 $EK-P_big 0 0;
+    }
+}
+
+//bin in modal
+.EK_burgerMenu {
+    display: none;
+}
+
+//SMALLMENU
+
+.EK_modalMenu {
+    .modalWrapper {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .modalWrapper-1 {
+        background-color: $EK-C-Black80;
+    }
+
+    .modalCloseBatton {
+        position: sticky;
+        height: 0;
+        text-align: right;
+        top: 10px;
+        margin: 0 8px 0 0;
+
+        .modalClose {
+        }
+
+        .EK_Btn-icon-BIgWhite {
+
+            use {
+                &:nth-child(1) {
+                    fill: $EK-C-Black;
+                    stroke: $EK-C-Black;
+                    stroke-width: 0;
+                }
+
+                &:nth-child(2) {
+                    stroke: $EK-C-Black;
+                }
+
+            }
+        }
+
+        use {
+            &:nth-child(1) {
+                fill: $EK-C-White;
+                stroke: $EK-C-White;
+                stroke-width: 0;
+            }
+
+            &:nth-child(2) {
+                stroke: $EK-C-White;
+            }
+
+        }
+    }
+
+    .modalWrapper-3 {
+        width: 70%;
+        margin: 0 0 0 30%;
+    }
+
+}
+
+
+// SMALLMENU
+
+.EK_customer_bin {
+    margin: 0 auto;
+    max-width: 760px;
+    background-color: $EK-C-White;
+    padding: 60px 6.5%;
+}
+
+
+.EK_customer_bin-sep {
+    margin: 30px 0;
+}
+
+.EK_customer_bin_cart-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.EK_customer_bin_cart_withoutImg {
+    margin: 0 0 0 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.EK_customer_bin-btn {
+    height: 60px;
+    margin: 60px 0 0 0;
+    color: $EK-C-White;
+}
+
+.EK_customer_bin_cart-img {
+    width: 100px;
+    height: 100px;
+}
+
+.EK_customer_bin_cart-nameCont {
+    width: 145px;
+}
+
+.EK_customer_bin_cart-countCont {
+    margin: 0 80px 0 0;
+    width: 65px;
+}
+
+.EK_customer_bin_cart-btnDel, .EK_customer_bin_cart-btnAdd, .EK_customer_bin_cart-delItem {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+}
+
+.EK_customer_bin_cart-number {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+}
+
+.EK_customer_bin_cart-btnDel {
+    background: url($EK-R-img + "ctrlElem/Minus.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.EK_customer_bin_cart-btnAdd {
+    background: url($EK-R-img + "ctrlElem/Plus.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.EK_customer_bin_cart-delItem {
+    display: inline-block;
+    background: url($EK-R-img + "ctrlElem/Cross.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.EK_customer_bin-total {
+    text-align: right;
+}
+
+.EK_customer_bin-checkBoxIcon {
+    display: inline-block;
+    width: 21.5px;
+    height: 20px;
+}
+
+
+.EK_customer_bin-text {
+    display: inline-block;
+}
+
+.use1, .use2 {
+    fill: $EK-C-White;
+}
+
+.use2 {
+    padding: 0 0 0 5px;
+    animation-duration: 0.5s;
+    animation-name: appearance;
+    transition: 1s;
+}
+
+.EK_customer_bin-header {
+    margin: 80px 0 0 0;
+}
+
+.EK_customer_bin-payBlock {
+    padding: 0 180px 0 0;
+}
+
+.EK_customer_bin-payItem {
+    margin: 15px 0 -9px 0;
+}
+
+.EK_customer_bin-check-Box {
+    margin: 0 30px 0 0;
+    display: inline-block;
+}
+
+.EK_customer_bin-formDelivery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    .EK_customer_bin-formDelivery-wrapper{
+        input {
+            width: 100%;
+            margin: 30px 0 0 0;
+        }
+    }
+
+}
+
+.EK_customer_bin-promo {
+    margin: 0 0 100px 0;
+}
+
+%EK_fast {
+    color: $EK-C-Green;
+    border: 0.5px solid $EK-C-Green;
+
+    &:hover {
+        color: $EK-C-Orange;
+        border: 0.5px solid $EK-C-Orange;
+
+        &::placeholder {
+            color: $EK-C-Orange;
+        }
+    }
+
+    &:focus {
+        color: $EK-C-Orange;
+        border: 0.5px solid $EK-C-Orange;
+    }
+}
+
+.EK_customer_bin-promoInput {
+    @extend %EK_fast;
+    margin: 30px 20px 0 0;
+    display: inline-block;
+    width: 260px;
+    height: 46px;
+    font-size: 18px;
+}
+
+.EK_customer_bin-promoBtn {
+    @extend %EK_fast;
+    line-height: 46px;
+    display: inline-block;
+    width: 140px;
+    height: 46px;
+}
+
+.EK_customer_bin-finish_header {
+    text-align: center;
+    margin: 60px 0 80px 0;
+}
+
+.EK_customer_bin-finish_text {
+    margin: 0 0 15px 0;
+}
+.EK_customer_bin-formDelivery-wrapper{
+width: 100%;
+    position: relative;
+}

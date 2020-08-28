@@ -1,0 +1,40 @@
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes EK_anim-show {
+    from {
+        opacity: .3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.EK_anim-show{
+    animation-duration: 1s;
+    animation-name: EK_anim-show;
+}
+@keyframes EK_slide_menu {
+    from {
+        margin: 0 0 0 100%;
+    }
+
+    to {
+        margin: 0 0 0 0%;
+    }
+}
+
+.EK_slide_menu{
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-duration: .3s;
+    animation-name: EK_slide_menu;
+}

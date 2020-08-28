@@ -1,0 +1,148 @@
+@media screen and (max-width: 1024px) {
+    $EK-P_big: 2.8%;
+    .EK_Form-inputUnderlineWhite {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .EK_separator {
+        margin: 0 0 120px 0;
+    }
+    .EK_header {
+        min-height: 100px;
+        padding: 0 $EK-P_big 0 $EK-P_big;
+
+    }
+    .EK_header_title {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .EK_menu {
+        margin: 12px 0 0 0;
+    }
+
+    .EK_menu_item {
+        font-size: 18px;
+        line-height: 21px
+    }
+    .EK_customer_bin_logo {
+        position: fixed;
+        margin: 0 $EK-P_big 0 0;
+        bottom: 90px !important;
+        top: initial !important;
+        right: 10px;
+    }
+    .EK_text-H {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .EK_sep_header {
+        margin: 0 0 60px $EK-P_big;
+
+        .EK_text-H2 {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    .EK_sep_hello {
+        padding: 90px 0 0 $EK-P_big;
+        min-height: 368px;
+    }
+    .EK_sep_hello-text {
+        max-width: 300px;
+    }
+    .Ek_sep_shop {
+        .EK_text-T1 {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+    .EK_shop {
+        margin: 0 $EK-P_big 0 $EK-P_big;
+    }
+
+    .Ek_sep_shop {
+        margin: 0 0 60px 0;
+    }
+    .Ek_shop_navigate {
+        .EK_text-H2 {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+
+    .EK_shop_item {
+        margin: 0 5% 60px 0;
+
+        &:nth-child(3n) {
+            margin: 0 0 60px 0;
+        }
+    }
+
+    .EK_shop_item_desc {
+        min-height: 95px;
+    }
+    .EK_shop_item_price {
+        order: 0;
+    }
+    .EK_shop_item_btn {
+        order: 1;
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+    .EK_mailing_box {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
+    .EK_pay {
+        margin: 0 5% 120px 5%;
+    }
+    .EK_pay_block {
+        width: 245px;
+
+    }
+    .EK_questions {
+        margin: 0 0 120px 0;
+        min-height: 775px;
+        background-size: 100%, 200%;
+        background-position: right 500px top 0, right 0 top 0;
+    }
+    .EK_questions_sep {
+        margin: 0 0 0 45%;
+    }
+    .EK_footer {
+        margin: 0 $EK-P_big 30px $EK-P_big;
+    }
+    .EK_footer_sep {
+        padding: 0;
+    }
+
+    //CUSTOMER BIN STYLE
+    .EK_modalBin{
+        .modalWrapper-3 {
+            padding: 0;
+        }
+        .modalClose {
+                 margin: -5px 0 0 0;
+                 fill: $EK-C-Black;
+
+                 use:nth-child(1) {
+                     fill: $EK-C-Black;
+                     stroke: $EK-C-Black;
+                     stroke-width: 0;
+                 }
+
+                 use:nth-child(2) {
+                     stroke: $EK-C-Black;
+                 }
+             }
+    }
+
+    .EK_customer_bin {
+        max-width: 1024px;
+    }
+
+
+}

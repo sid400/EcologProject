@@ -1,0 +1,423 @@
+body,.modalWindow,.modalWrapper {
+    &::-webkit-scrollbar-button {
+    }
+
+    &::-webkit-scrollbar-corner {
+
+    }
+
+    &::-webkit-scrollbar-track-piece {
+
+    }
+
+    &::-webkit-scrollbar {
+        width: .5%;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $EK-C-Green
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $EK-C-Black;
+    }
+}
+.Ek_shop_navigate{
+    &::-webkit-scrollbar-button {
+    }
+
+    &::-webkit-scrollbar-corner {
+
+    }
+
+    &::-webkit-scrollbar-track-piece {
+
+    }
+
+    &::-webkit-scrollbar {
+        height: 0;
+        opacity: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $EK-C-Green
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $EK-C-Orange;
+    }
+}
+
+
+//Text Styles
+
+.PoiretOne {
+    font-family: PoiretOne-R, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: $EK-C-Black;
+}
+
+.EK_text-H {
+    @extend .PoiretOne;
+    font-size: 64px;
+    line-height: 75px;
+}
+
+.EK_text-H1 {
+    @extend .PoiretOne;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.EK_text-H2 {
+    @extend .PoiretOne;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.EK_text-T1 {
+    @extend .PoiretOne;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.EK_text-T2 {
+    @extend .PoiretOne;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.EK_text-Btn {
+    @extend .PoiretOne;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+//Buttons and forms styles
+.EK_Btn-stnd {
+    @extend .EK_text-Btn;
+    background-color: $EK-C-Green;
+}
+
+.EK_Btn-clr {
+    @extend .EK_text-Btn;
+    border: 0.5px solid $EK-C-White;
+    background: none;
+    color: $EK_C-White;
+    cursor: pointer;
+    &:visited{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+.EK_Btn-link,{
+    @extend .EK_text-H2;
+    color: $EK-C-Black;
+    cursor:pointer;
+    &:visited{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+.EK_Btn-icon {
+    width: 18px;
+    height: 18px;
+    fill: $EK-C-White;
+    cursor: pointer;
+}
+
+.EK_Btn-iconBigBlack {
+    width: 60px;
+    height: 60px;
+    fill: $EK-C-Black;
+
+    use {
+        &:nth-child(1) {
+            fill: $EK-C-Black;
+        }
+
+        &:nth-child(2) {
+            stroke: $EK-C-Black;
+            fill: none;
+            stroke-width: 2;
+        }
+    }
+}
+
+.EK_Btn-icon-BIgWhite {
+    @extend .EK_Btn-iconBigBlack;
+    fill: $EK-C-White;
+
+    use {
+        &:nth-child(1) {
+            fill: $EK-C-White;
+            stroke: $EK-C-White;
+            stroke-width: 0;
+        }
+
+        &:nth-child(2) {
+            stroke: $EK-C-White;
+        }
+
+    }
+}
+
+.EK_Form-inputBorder {
+    @extend .EK_text-T2;
+    padding: 0 0 0 10px;
+    border: 0.5px solid $EK-C-Black;
+    color: $EK-C-Black;
+    background-color: $EK-C-Clear;
+    &:-webkit-autofill {
+        box-shadow: inset 0 0 0 50px $EK-C-Clear;
+        -webkit-text-fill-color: $EK-C-Clear;
+    }
+
+    &::placeholder {
+        opacity: 1;
+        transition: opacity .3s ease;
+        color: $EK-C-Black;
+    }
+
+    &:focus {
+        outline: none;
+
+        &::placeholder {
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+    }
+}
+
+.EK_Form-inputUnderlineWhite {
+    @extend .EK_text-T2;
+    padding: 0 0 5px 10px;
+    border-bottom: 0.5px solid $EK-C-White;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none;
+    color: $EK-C-White;
+
+    &:-webkit-autofill {
+        box-shadow: inset 0 0 0 50px $EK-C-White;
+        -webkit-text-fill-color: $EK-C-White;
+    }
+
+    &::placeholder {
+        opacity: 1;
+        transition: opacity .3s ease;
+        color: $EK-C-White;
+    }
+
+    &:focus {
+        outline: none;
+        color: $EK-C-Orange;
+        &::placeholder {
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+    }
+}
+
+.EK_Form-inputUnderlineBlack {
+    @extend .EK_Form-inputUnderlineWhite;
+    border-bottom: 0.5px solid $EK-C-Black;
+    color: $EK-C-Black;
+
+    &:-webkit-autofill {
+        box-shadow: inset 0 0 0 50px $EK-C-Black;
+        -webkit-text-fill-color: $EK-C-Black;
+    }
+
+    &::placeholder {
+        opacity: 1;
+        transition: opacity .3s ease;
+        color: $EK-C-Black;
+    }
+
+    &:focus {
+        outline: none;
+
+        &::placeholder {
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+    }
+
+}
+
+.EK_Form-textArea {
+    @extend .EK_text-T2;
+    height: 100px;
+    padding: 5px 0 0 10px;
+    border: 0.5px solid $EK-C-White;
+    color: $EK-C-White;
+    background: none;
+    resize: none;
+    overflow: auto;
+    &::placeholder{
+        color: $EK-C-White;
+    }
+}
+
+//Buttons and forms hovers
+
+%EK_btn_hover-stnd {
+    &:hover {
+        background-color: $EK-C-Orange;
+        color: $EK-C-White;
+        text-decoration: none;
+    }
+
+}
+
+%EK_btn_hover-clr {
+    &:hover {
+        color: $EK-C-Orange;
+        border: 0.5px solid $EK-C-Orange;
+        outline: none;
+    }
+
+}
+
+%EK_btn_hover-link {
+    &:hover {
+        color: $EK-C-Orange;
+        fill: $EK-C-Orange;
+        text-decoration: none;
+    }
+    &:focus{
+        text-decoration: none;
+    }
+}
+
+%EK_btn_hover-iconBig {
+    &:hover {
+        use {
+            &:nth-child(1) {
+                fill: $EK-C-Orange;
+                stroke: $EK-C-Orange;
+                stroke-width: 0;
+            }
+
+            &:nth-child(2) {
+                stroke: $EK-C-Orange;
+            }
+        }
+    }
+}
+
+%EK_form_hover-input {
+    &:hover {
+        color: $EK-C-Orange;
+        border-color: $EK-C-Orange;
+        &:-webkit-autofill {
+            box-shadow: inset 0 0 0 50px $EK-C-Orange;
+            -webkit-text-fill-color: $EK-C-Orange;
+        }
+
+        &::placeholder {
+            opacity: 1;
+            transition: opacity .3s ease;
+            color: $EK-C-Orange;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $EK-C-Orange;
+        color: $EK-C-Orange;
+        &::placeholder {
+            color: $EK-C-Orange;
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+
+    }
+}
+
+
+
+.EK_Btn-link-active{
+    color: $EK-C-Orange;
+    fill: $EK-C-Orange;
+    text-decoration: none;
+
+}
+
+.EK_Btn-stnd {
+    cursor: pointer;
+    @extend %EK_btn_hover-stnd;
+    color: $EK-C-White;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    &:visited{
+        outline: none;
+        text-decoration: none;
+    }
+    &:focus{
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+.EK_Btn-clr, {
+    @extend %EK_btn_hover-clr;
+}
+
+.EK_Btn-link, .EK_Btn-icon {
+    @extend %EK_btn_hover-link;
+}
+
+.EK_Btn-iconBigBlack, .EK_Btn-icon-BIgWhite {
+    @extend %EK_btn_hover-iconBig;
+}
+.EK_Form-inputBorder, .EK_Form-inputUnderlineWhite,.EK_Form-inputUnderlineBlack, .EK_Form-textArea{
+    @extend %EK_form_hover-input;
+}
+.EK_Form-inputBorder{
+    &:hover{
+        color: $EK-C-White;
+        border-color: $EK-C-White;
+        &::placeholder{
+            color: $EK-C-White;
+        }
+    }
+    &:focus{
+        color: $EK-C-White;
+        &::placeholder{
+            color: $EK-C-White;
+        }
+        border-color: $EK-C-White;
+    }
+
+}
+
+.EK_sep_line{
+    border-bottom: .5px solid $EK-C-Black;
+    opacity: 0.5;
+}
+
+.EK_overflow_hidden{
+    overflow: hidden;
+    margin: 0 .5% 0 0 ;
+}
+.EK_overflow_auto{
+    overflow: auto;
+}
+
+
+

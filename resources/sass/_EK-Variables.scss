@@ -1,0 +1,29 @@
+//Roots
+
+$EK-R-font: '../../fonts/';
+$EK-R-img: '../../img/';
+
+//Colors
+
+$EK-C-Black: rgb(0, 39, 44);
+$EK-C-Green: rgb(88, 110, 88);
+$EK-C-Orange: rgb(235, 179, 112);
+$EK-C-White: rgb(255, 255, 255);
+$EK-C-Black80:rgba(0, 39, 44, 0.8);
+$EK-C-Orange90: rgba(235, 179, 112,0.9);
+$EK-C-Clear: rgba(0,0,0,0);
+
+
+
+//sizes and distance
+
+$EK-P_big: 8.33%;
+
+@mixin display($flexbox){
+    justify-items: $flexbox;
+    justify-content: $flexbox;
+    justify-self: $flexbox;
+    align-items: $flexbox;
+    align-content: $flexbox;
+    align-self: $flexbox;
+}
