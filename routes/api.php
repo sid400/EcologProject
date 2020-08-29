@@ -23,15 +23,15 @@ Route::group([
     'as' => 'EK::',
 ],
     function () {
-        Route::get('/GetProduct', 'Landingpage\Ekolog\EkologController@GetProductJSON')
+        Route::get('/GetProduct', 'EkologController@GetProductJSON')
             ->name('GetProduct');
-        Route::post('/putOrder', 'Landingpage\Ekolog\EkologController@putOrder')
+        Route::post('/putOrder', 'EkologController@putOrder')
             ->name('putOrder');
-//        Route::get('/sendOrder', 'Landingpage\Ekolog\EkologController@sendOrder')
+//        Route::get('/sendOrder', 'EkologController@sendOrder')
 //            ->name('sendOrder');
-        Route::post('/subscribe', 'Landingpage\Ekolog\EkologController@subscribe')
+        Route::post('/subscribe', 'EkologController@subscribe')
             ->name('subscribe');
-        Route::post('/feedback', 'Landingpage\Ekolog\EkologController@feedback')
+        Route::post('/feedback', 'EkologController@feedback')
             ->name('feedback');
     }
 );

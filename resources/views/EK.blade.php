@@ -8,7 +8,7 @@
     <script src="{{ asset('js/Ekolog.js') }}" defer></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/EK.css') }}" rel="stylesheet">
-    <link href="{{ asset('SVG/icons/Favicon.svg') }}" rel="shortcut icon" type="image/x-icon">
+    <link href="{{ asset('img/SVG/icons/Favicon.svg') }}" rel="shortcut icon" type="image/x-icon">
     <title>Ekolog</title>
 </head>
 <body class="EK_overflow_auto">

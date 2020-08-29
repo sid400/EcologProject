@@ -56,8 +56,8 @@ class EK_MailArrow extends Mailable
      */
     public function build()
     {
-//        return $this->view('chips.EK.EK_MailArrow')
-        return $this->view($this->pathView, compact('data'))
+        $data1 = $this->data;
+        return $this->view($this->pathView, compact('data1'))
             ->subject($this->subject);
     }
 //from(), subject(), view() и attach()

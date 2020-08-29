@@ -7,7 +7,7 @@ use App\Jobs\test;
 use App\Mail\EK_MailArrow;
 use App\Models\Ekolog;
 use App\Models\SubscribeEcolog;
-use App\Models\feedbackEcolog;
+use App\Models\FeedbackEcolog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use PHPUnit\Framework\Constraint\IsEmpty;
@@ -112,7 +112,7 @@ class EkologController extends Controller
 
     function sendOrder($to, $dataIntoMail)
     {
-        Mail::to($to)->queue(new EK_MailArrow($dataIntoMail, 'chips.EK.EK_mailingOrder', 'Ваш заказ'));
+        Mail::to($to)->queue(new EK_MailArrow($dataIntoMail, 'chips.EK_mailingOrder', 'Ваш заказ'));
     }
 
     function feedback(Request $request)
@@ -142,7 +142,7 @@ class EkologController extends Controller
             return $response;
 
         } else {
-            $feedback = new feedbackEcolog;
+            $feedback = new FeedbackEcolog;
             $feedback->fill($request->all());
             if ($feedback->save()) {
                 $response['feedbackSave'] = true;
@@ -178,7 +178,7 @@ class EkologController extends Controller
         if (!$mail) {
             $response['isExistsMail'] = false;
             $dataIntoMail = $mailFromRequest;
-            Mail::to($mailFromRequest)->queue(new EK_MailArrow($dataIntoMail, 'chips.EK.EK_mailingSubscribe', 'Добро пожаловать'));
+            Mail::to($mailFromRequest)->queue(new EK_MailArrow($dataIntoMail, 'chips.EK_mailingSubscribe', 'Добро пожаловать'));
             $subscribe = new SubscribeEcolog;
             $subscribe->user_mail = $mailFromRequest;
             $subscribe->save();

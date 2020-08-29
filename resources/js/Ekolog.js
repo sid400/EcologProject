@@ -147,9 +147,8 @@ const EK = new Vue({
         sendFeedback() {
             let data = this.feedback.data
             axios
-                .post('http://landosiki/api/EK/feedback', data)
+                .post('https://ecolog.ipa-wb.ru/api/EK/feedback', data)
                 .then((response) => {
-                    console.log(response.data)
                     if (response.data.errorValidator) {
                         this.feedback.errors = response.data.errors
                         this.feedback.validate.errorValidator = response.data.errorValidator
@@ -177,7 +176,7 @@ const EK = new Vue({
         sendSubscribe: function () {
             let mail = this.subscribe.subscribeMail;
             axios
-                .post('http://landosiki/api/EK/subscribe', {'mail': mail})
+                .post('https://ecolog.ipa-wb.ru/api/EK/subscribe', {'mail': mail})
                 .then((response) => {
                     /**
                      * @type {Object}
@@ -213,7 +212,7 @@ const EK = new Vue({
         sendOrder() {
             let bin = this.CustomerBin;
             axios
-                .post('http://landosiki/api/EK/putOrder', bin)
+                .post('https://ecolog.ipa-wb.ru/api/EK/putOrder', bin)
                 .then((response) => {
                     this.orderResponse = response.data
                     if (this.orderResponse.isDone === true) {
@@ -222,7 +221,6 @@ const EK = new Vue({
                     }
                 })
                 .catch((error) => {
-                    console.log("error");
                     console.log(error);
                 });
 
@@ -232,7 +230,6 @@ const EK = new Vue({
         filterProducts() {
             this.filteredProductBase = [];
             if (this.Shops.productQuery === '0') {
-                console.log('no filter')
                 this.filteredProductBase = this.productBase;
             } else {
                 this.productBase.forEach(product => {
@@ -340,7 +337,7 @@ const EK = new Vue({
     beforeMount() {
         // noinspection CommaExpressionJS
         axios
-            .get('http://landosiki/api/EK/GetProduct')
+            .get('https://ecolog.ipa-wb.ru/api/EK/GetProduct')
             .then(response => (
                 this.productBase = response.data,
                     this.productBaseObj = this.arrayToObj(response.data),
@@ -363,5 +360,3 @@ const EK = new Vue({
     }
 
 });
-
-console.log(EK);
