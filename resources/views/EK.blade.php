@@ -75,11 +75,12 @@
                  v-on:click="bodyOverflow(),isVisibilityModals.bin = !isVisibilityModals.bin">
                 <use xlink:href="#EK_ico-bin"></use>
                 <use xlink:href="#EK_ico-circle"></use>
-                <use v-if="CustomerBin.bin.length > 0" xlink:href="#EK_ico-circleDot"></use>
+{{--                <use v-if="CustomerBin.bin.length > 0" xlink:href="#EK_ico-circleDot"></use>--}}
             </svg>
+            <div v-show="!isVisibilityModals.bin" v-if="CustomerBin.bin.length > 0" class="EK_customer_bin-dot"></div>
         </div>
         <header class="EK_header">
-            <div class="EK_header_title PoiretOne">эколог</div>
+            <div v-on:click="animClass('.EK_customer_bin-dot', 'EK_scale')" class="EK_header_title PoiretOne">эколог</div>
             <div class="EK_burgerMenu"
                  v-if="!isVisibilityModals.smallMenu"
                  v-on:click="bodyOverflow(),isVisibilityModals.smallMenu = !isVisibilityModals.smallMenu">

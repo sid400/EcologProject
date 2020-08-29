@@ -39,8 +39,19 @@ html, body {
 }
 
 .EK_customer_bin-ico {
+    position: relative;
     margin: 10px 0 0 0;
     z-index: 1000;
+}
+.EK_customer_bin-dot{
+    position: absolute;
+    top: 50px;
+    right: 46px;
+    width: 15px;
+    height: 15px;
+    background-color: $EK_C-Orange;
+    border-radius: 50%;
+    z-index: 1001;
 }
 
 //header

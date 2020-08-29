@@ -124,6 +124,13 @@ const EK = new Vue({
             })
             return obj
         },
+        animClass(selector, animClass){
+            let bodyClass = document.querySelector(selector).classList;
+            bodyClass.add(animClass);
+            setTimeout(() => {
+                bodyClass.remove(animClass)
+            }, 500);
+        },
         changeClass(selector, firstClass, secondClass) {
             let bodyClass = document.querySelector(selector).classList;
             let isFirstClass = bodyClass.contains(firstClass);

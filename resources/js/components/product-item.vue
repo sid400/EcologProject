@@ -7,7 +7,7 @@
         <p class="EK_text-T1 EK_shop_item_desc">{{product.short_description}}</p>
         <div class="EK_sep_line EK_shop_item_line"></div>
         <div class="EK_shop_item_sep">
-            <span v-on:click="add(product.product_id)" class="EK_Btn-stnd  EK_shop_item_btn">В корзину</span>
+            <span v-on:click="add(product.product_id),animClass('.EK_customer_bin-dot', 'EK_scale')" class="EK_Btn-stnd  EK_shop_item_btn">В корзину</span>
             <span class="EK_text-H2 EK_shop_item_price">{{product.price}} &#1031;</span>
         </div>
     </div>
@@ -16,13 +16,16 @@
 <script>
     export default {
         name: "product-item",
-        props: ['product', 'add','delete'],
+        props: ['product', 'add','delete',],
         computed: {
             path: function () {
                 return this.$root.path
             },
             ext: function () {
                 return this.$root.ext
+            },
+            animClass: function () {
+                return this.$root.animClass
             },
         },
         data: function () {
