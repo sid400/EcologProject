@@ -320,8 +320,6 @@ const EK = new Vue({
             this.CustomerBin.bin.splice(prodStatus, 1);
             let bin = JSON.stringify(this.CustomerBin.bin)
             Vue["$cookies"].set('CustomerBin', bin);
-            this.calcTotalBin();
-            this.calcTotalOrder();
         },
         searchItemInBin(id) {
             if (this.CustomerBin.bin.length === 0) {

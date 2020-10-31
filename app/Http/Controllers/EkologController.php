@@ -71,7 +71,7 @@ class EkologController extends Controller
             $response['massage'] = 'Ошибка валидации';
             $response['validator'] = $validator->errors();
             return $response;
-        } elseif ($delivery > 3 || $delivery < 1 ) {
+        } elseif ($delivery > 3 || $delivery < 1) {
             $response['Error'] = true;
             $response['massage'] = 'Ошибка доставки';
             return $response;
@@ -84,17 +84,16 @@ class EkologController extends Controller
             $response['Error'] = true;
             $response['massage'] = 'Ошибка промокода';
             return $response;
-        } else{
-            for ($i = 0; $i < count($bin); ++$i)
-            {
+        } else {
+            for ($i = 0; $i < count($bin); ++$i) {
                 $product = Ekolog::where('id', $bin[$i]['id'])->first();
-                if (!isset($product) || $bin[$i]['count'] < 1 || is_float($bin[$i]['count'] +1 ) ){
+                if (!isset($product) || $bin[$i]['count'] < 1 || is_float($bin[$i]['count'] + 1)) {
                     $response['Error'] = true;
-                    $response['massage'] = 'Несуществующий товар с id:'.$bin[$i]['id']. ' или неверное количество:'.$bin[$i]['count'];
+                    $response['massage'] = 'Несуществующий товар с id:' . $bin[$i]['id'] . ' или неверное количество:' . $bin[$i]['count'];
                     return $response;
                 }
-                $bin[$i]['product']= $product;
-                $totalBin +=  $bin[$i]['count']*$bin[$i]['product']['price'];
+                $bin[$i]['product'] = $product;
+                $totalBin += $bin[$i]['count'] * $bin[$i]['product']['price'];
             }
         }
         $totalOrder = $totalBin * 0.9 + $deliveryPrices[$delivery]['price'];
@@ -104,7 +103,7 @@ class EkologController extends Controller
         $order['totalOrder'] = $totalOrder;
         $order['delivery'] = $deliveryPrices[$delivery]['name'];
         $order['paymentMethod'] = $paymentDescript[$paymentMethod];
-        $this->sendOrder($order['userData']['email'],$order);
+        $this->sendOrder($order['userData']['email'], $order);
         $response['isDone'] = true;
         return $response;
 
@@ -117,7 +116,6 @@ class EkologController extends Controller
 
     function feedback(Request $request)
     {
-
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255|min:2|string',
@@ -156,7 +154,10 @@ class EkologController extends Controller
 
     function subscribe(Request $request)
     {
+        //Получаем E-mail из запроса
         $mailFromRequest = $request->get('mail');
+
+        //Формируем массив для ответа
         $response = [
             'isError' => false,
             'mailCheck' => false,
@@ -164,9 +165,11 @@ class EkologController extends Controller
             'massage' => null,
             'errors' => null,
         ];
+        //Валидируем данные
         $validator = Validator::make($request->all(), [
             'mail' => 'required|max:255|email',
         ]);
+        //В случае если валидация не пройдена, записываем ошибки в массив ответов и возвращаем его на фронт
         if ($validator->fails()) {
             $response['isError'] = true;
             $response['mailCheck'] = true;
@@ -174,7 +177,9 @@ class EkologController extends Controller
             $response['massage'] = 'incorrect mail';
             return $response;
         }
+        //Проверяем не подписан ли пользователь уже на рассылку
         $mail = SubscribeEcolog::firstWhere('user_mail', $mailFromRequest);
+        // Если пользователь не подписан, отправляем в очередь на отправку письмо с подтвержедение подписки и аписываем E-mail  в базу, отправляем ответ на фронт.
         if (!$mail) {
             $response['isExistsMail'] = false;
             $dataIntoMail = $mailFromRequest;
@@ -183,7 +188,7 @@ class EkologController extends Controller
             $subscribe->user_mail = $mailFromRequest;
             $subscribe->save();
             return $response;
-
+        //Если пользователь нашелся то отпраляем ответ , что он уже подписан на рассылку.
         } else {
             $response['isError'] = true;
             $response['isExistsMail'] = true;

@@ -51,6 +51,7 @@
                               v-bind:del="deleteBinItem">
                 </customer-bin>
             </template>
+
         </modal-window>
     </div>
     <div class="EK_modalMenu">

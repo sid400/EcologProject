@@ -61,4 +61,7 @@ class EK_MailArrow extends Mailable
             ->subject($this->subject);
     }
 //from(), subject(), view() и attach()
+function sdsdsd($items..){
+
+}
 }
